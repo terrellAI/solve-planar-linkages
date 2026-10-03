@@ -15,6 +15,26 @@
 不能从任意图片自动识别并求解所有机构。
 固定 R/P 求解器只支持模型格式中列出的构造原语；一般闭环和接触切换不能冒充已支持模型。
 
+## 从行程函数到凸轮动画
+
+新增对心/左右偏置尖顶直动盘形凸轮，支持顺时针和逆时针输入。复用现有旋转矩阵和 GIF 导出器，通过反转法离散构造轮廓；行程统一为 `stroke(theta_deg)`，自变量属于 `[0,360]` 度。
+
+- 基圆用虚线表达。
+- 实际运动、反转导杆描线与行程曲线游标同步。
+- 反转偏置导杆始终与偏心圆相切，沿导杆量取行程。
+- 独立检查0°与360°端点、0.1°采样及循环接缝。
+
+[凸轮输入图、拓扑确认、推导与真实执行结果](docs/cam-example.md) · [统一接口与适用范围](references/cam.md)
+
+![实际执行的尖顶凸轮动画](docs/cam-example/animation.gif)
+
+```bash
+python scripts/run_cam.py docs/cam-example/stroke.py \
+  --radius 40 --offset 0 --direction counterclockwise --out output/cam --gif
+```
+
+仅适用于理想尖顶直动接触运动学；滚子、平底和摆动从动件需要另行推导。该入口不会把接触约束伪装成固定R/P JSON模型。
+
 ## 安装到 Codex
 
 将本仓库完整克隆到 Codex 的技能发现目录，目录名保持 `solve-planar-linkages`。
@@ -73,6 +93,7 @@ python scripts/run_model.py references/examples/case_6216.json --out output/case
 python scripts/test_linkage.py
 python scripts/test_animation.py
 python scripts/test_expanded_examples.py
+python scripts/test_cam.py
 ```
 
 本仓库发布时已运行以上回归检查。回归检查覆盖现有实现和案例；本次机构的具体结论见独立验证记录。
