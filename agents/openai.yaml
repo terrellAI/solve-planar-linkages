@@ -1,6 +1,6 @@
 interface:
   display_name: 平面机构正向求解
-  short_description: 按刚体与运动副推导平面机构，验证整周可达性并生成流畅动画
+  short_description: 按刚体与运动副推导平面机构，分析连杆与尖顶凸轮，验证运动并生成同步动画
   default_prompt: 使用 $solve-planar-linkages 分析机构图，先标注点类型、构件与运动副并确认拓扑，再正向求解并迭代尺寸，输出动画与每10度坐标数据。
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
