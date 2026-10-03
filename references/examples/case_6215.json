@@ -1,0 +1,117 @@
+{
+  "name": "case_6215",
+  "title": "6215 | rocker + separate output rod",
+  "fixed": {
+    "A": [
+      0,
+      60
+    ],
+    "D": [
+      160,
+      140
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        20,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "D",
+      "r": 160,
+      "s": 90,
+      "branch": -1
+    },
+    {
+      "op": "circle_line",
+      "out": "E",
+      "p": "C",
+      "r": 150,
+      "q": [
+        160,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "branch": -1
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "D",
+      "C"
+    ],
+    [
+      "C",
+      "E"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      20
+    ],
+    [
+      "B",
+      "C",
+      160
+    ],
+    [
+      "D",
+      "C",
+      90
+    ],
+    [
+      "C",
+      "E",
+      150
+    ]
+  ],
+  "shared_pin": {
+    "C": [
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "guides": [
+    {
+      "point": "E",
+      "origin": [
+        160,
+        0
+      ],
+      "axis": [
+        0,
+        1
+      ],
+      "lo": -135,
+      "hi": -60,
+      "sleeve_length": 24,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram"
+}

@@ -1,0 +1,168 @@
+{
+  "name": "Klann six-bar walking reference",
+  "units": "mm",
+  "dimension_source": "US6260862B1 Table 1 extended-pose coordinates scaled by 100; three-decimal published coordinates, not exact manufacture or original optimized dimensions.",
+  "fixed": {
+    "A": [
+      159.9,
+      75.0
+    ],
+    "F": [
+      100.9,
+      57.4
+    ],
+    "G": [
+      136.6,
+      136.6
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        -26.80000000000001,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "F",
+      "r": 59.0,
+      "s": 32.062439083762804,
+      "branch": -1
+    },
+    {
+      "op": "rigid",
+      "out": "K",
+      "origin": "C",
+      "known": "B",
+      "known_local": [
+        59.0,
+        0
+      ],
+      "target_local": [
+        -50.89999999999999,
+        11.599999999999994
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "H",
+      "p": "K",
+      "q": "G",
+      "r": 89.66113985445422,
+      "s": 51.76446657698696,
+      "branch": 1
+    },
+    {
+      "op": "rigid",
+      "out": "E",
+      "origin": "K",
+      "known": "H",
+      "known_local": [
+        89.66113985445422,
+        0
+      ],
+      "target_local": [
+        -77.64032457428293,
+        -44.8305699272271
+      ]
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "K"
+    ],
+    [
+      "K",
+      "B"
+    ],
+    [
+      "F",
+      "C"
+    ],
+    [
+      "G",
+      "H"
+    ],
+    [
+      "H",
+      "K"
+    ],
+    [
+      "K",
+      "E"
+    ],
+    [
+      "E",
+      "H"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      26.80000000000001
+    ],
+    [
+      "B",
+      "C",
+      59.0
+    ],
+    [
+      "C",
+      "K",
+      52.20507638151676
+    ],
+    [
+      "K",
+      "B",
+      110.5104972389501
+    ],
+    [
+      "F",
+      "C",
+      32.062439083762804
+    ],
+    [
+      "G",
+      "H",
+      51.76446657698696
+    ],
+    [
+      "H",
+      "K",
+      89.66113985445422
+    ],
+    [
+      "K",
+      "E",
+      89.65377850375297
+    ],
+    [
+      "E",
+      "H",
+      173.20381058163818
+    ]
+  ],
+  "rigid_points": [
+    "B",
+    "C",
+    "K"
+  ],
+  "rod_width": 8,
+  "reference_case_only": "Topology in this documented reference case; new images require fresh rigid-body confirmation."
+}

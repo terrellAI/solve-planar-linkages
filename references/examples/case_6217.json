@@ -1,0 +1,117 @@
+{
+  "name": "case_6217",
+  "title": "6217 | independent rods at C",
+  "fixed": {
+    "A": [
+      0,
+      0
+    ],
+    "D": [
+      200,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        25,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "D",
+      "r": 160,
+      "s": 120,
+      "branch": 1
+    },
+    {
+      "op": "circle_line",
+      "out": "E",
+      "p": "C",
+      "r": 200,
+      "q": [
+        60,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "branch": 1
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "D",
+      "C"
+    ],
+    [
+      "C",
+      "E"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      25
+    ],
+    [
+      "B",
+      "C",
+      160
+    ],
+    [
+      "D",
+      "C",
+      120
+    ],
+    [
+      "C",
+      "E",
+      200
+    ]
+  ],
+  "shared_pin": {
+    "C": [
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "guides": [
+    {
+      "point": "E",
+      "origin": [
+        60,
+        0
+      ],
+      "axis": [
+        0,
+        1
+      ],
+      "lo": 230,
+      "hi": 330,
+      "sleeve_length": 24,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram"
+}

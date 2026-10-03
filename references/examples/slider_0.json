@@ -1,0 +1,78 @@
+{
+  "name": "slider_0",
+  "fixed": {
+    "A": [
+      0,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        40,
+        0
+      ]
+    },
+    {
+      "op": "circle_line",
+      "out": "C",
+      "p": "B",
+      "r": 160,
+      "q": [
+        0,
+        0
+      ],
+      "v": [
+        1,
+        0
+      ],
+      "branch": 1
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      40
+    ],
+    [
+      "B",
+      "C",
+      160
+    ]
+  ],
+  "guides": [
+    {
+      "point": "C",
+      "origin": [
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0
+      ],
+      "lo": 90,
+      "hi": 230,
+      "sleeve_length": 24,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram"
+}

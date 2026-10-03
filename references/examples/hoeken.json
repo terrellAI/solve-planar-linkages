@@ -1,0 +1,101 @@
+{
+  "name": "Hoeken approximate straight-line",
+  "units": "mm",
+  "dimension_source": "Illustrative scale of AD:AB:BC:DC:CE = 2:1:2.5:2.5:2.5; DMG-Lib 16515023 four-bar subchain. Approximate path, not exact straight line.",
+  "fixed": {
+    "A": [
+      0,
+      0
+    ],
+    "D": [
+      80,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        40,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "D",
+      "r": 100,
+      "s": 100,
+      "branch": 1
+    },
+    {
+      "op": "rigid",
+      "out": "E",
+      "origin": "B",
+      "known": "C",
+      "known_local": [
+        100,
+        0
+      ],
+      "target_local": [
+        200,
+        0
+      ]
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "D"
+    ],
+    [
+      "C",
+      "E"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      40
+    ],
+    [
+      "B",
+      "C",
+      100
+    ],
+    [
+      "D",
+      "C",
+      100
+    ],
+    [
+      "C",
+      "E",
+      100
+    ],
+    [
+      "B",
+      "E",
+      200
+    ]
+  ],
+  "rigid_points": [
+    "B",
+    "C",
+    "E"
+  ],
+  "rod_width": 8,
+  "reference_case_only": "Topology in this documented reference case; new images require fresh rigid-body confirmation."
+}

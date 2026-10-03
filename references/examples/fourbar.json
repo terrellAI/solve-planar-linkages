@@ -1,0 +1,67 @@
+{
+  "name": "fourbar",
+  "fixed": {
+    "A": [
+      0,
+      0
+    ],
+    "D": [
+      160,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        40,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "D",
+      "r": 140,
+      "s": 100,
+      "branch": 1
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "D"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      40
+    ],
+    [
+      "B",
+      "C",
+      140
+    ],
+    [
+      "C",
+      "D",
+      100
+    ]
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram"
+}

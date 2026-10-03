@@ -1,0 +1,137 @@
+{
+  "name": "case_6216",
+  "title": "6216 | rigid ABC crusher linkage",
+  "fixed": {
+    "O1": [
+      0,
+      180
+    ],
+    "O2": [
+      100,
+      0
+    ],
+    "O3": [
+      -130,
+      100
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "A",
+      "origin": "O1",
+      "local": [
+        10,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "B",
+      "p": "A",
+      "q": "O2",
+      "r": 180,
+      "s": 90,
+      "branch": -1
+    },
+    {
+      "op": "rigid",
+      "out": "C",
+      "origin": "A",
+      "known": "B",
+      "known_local": [
+        180,
+        0
+      ],
+      "target_local": [
+        180,
+        -45
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "D",
+      "p": "C",
+      "q": "O3",
+      "r": 200,
+      "s": 200,
+      "branch": 1
+    }
+  ],
+  "rods": [
+    [
+      "O1",
+      "A"
+    ],
+    [
+      "A",
+      "B"
+    ],
+    [
+      "A",
+      "C"
+    ],
+    [
+      "C",
+      "B"
+    ],
+    [
+      "B",
+      "O2"
+    ],
+    [
+      "C",
+      "D"
+    ],
+    [
+      "D",
+      "O3"
+    ]
+  ],
+  "lengths": [
+    [
+      "O1",
+      "A",
+      10
+    ],
+    [
+      "A",
+      "B",
+      180
+    ],
+    [
+      "A",
+      "C",
+      185.53975315279473
+    ],
+    [
+      "B",
+      "C",
+      45
+    ],
+    [
+      "B",
+      "O2",
+      90
+    ],
+    [
+      "C",
+      "D",
+      200
+    ],
+    [
+      "D",
+      "O3",
+      200
+    ]
+  ],
+  "rigid_points": [
+    "A",
+    "B",
+    "C"
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram",
+  "topology_source": "用户针对本案例明确确认ABC为同一刚体；仅适用于本案例，不是其它机构的默认关系"
+}

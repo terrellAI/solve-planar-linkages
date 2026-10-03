@@ -1,0 +1,139 @@
+{
+  "name": "Crank-driven Scott-Russell",
+  "units": "mm",
+  "dimension_source": "Illustrative crank-slider drives an ideal Scott-Russell cell; S range 40..80 mm avoids degenerate endpoints.",
+  "fixed": {
+    "A": [
+      -40,
+      0
+    ],
+    "O": [
+      0,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        20,
+        0
+      ]
+    },
+    {
+      "op": "circle_line",
+      "out": "S",
+      "p": "B",
+      "r": 100,
+      "q": [
+        0,
+        0
+      ],
+      "v": [
+        1,
+        0
+      ],
+      "branch": 1
+    },
+    {
+      "op": "circles",
+      "out": "M",
+      "p": "O",
+      "q": "S",
+      "r": 50,
+      "s": 50,
+      "branch": 1
+    },
+    {
+      "op": "rigid",
+      "out": "T",
+      "origin": "S",
+      "known": "M",
+      "known_local": [
+        50,
+        0
+      ],
+      "target_local": [
+        100,
+        0
+      ]
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "S"
+    ],
+    [
+      "S",
+      "T"
+    ],
+    [
+      "O",
+      "M"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      20
+    ],
+    [
+      "B",
+      "S",
+      100
+    ],
+    [
+      "O",
+      "M",
+      50
+    ],
+    [
+      "S",
+      "M",
+      50
+    ],
+    [
+      "M",
+      "T",
+      50
+    ],
+    [
+      "S",
+      "T",
+      100
+    ]
+  ],
+  "rigid_points": [
+    "S",
+    "M",
+    "T"
+  ],
+  "rod_width": 8,
+  "reference_case_only": "Topology in this documented reference case; new images require fresh rigid-body confirmation.",
+  "guides": [
+    {
+      "point": "S",
+      "origin": [
+        0,
+        0
+      ],
+      "axis": [
+        1,
+        0
+      ],
+      "lo": 32,
+      "hi": 88,
+      "sleeve_length": 10,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ]
+}

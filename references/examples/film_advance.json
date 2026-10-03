@@ -1,0 +1,127 @@
+{
+  "name": "Four-bar film-advance claw",
+  "units": "mm",
+  "dimension_source": "Illustrative dimensions resembling image proportions; not physical measurements. Topology confirmed by user.",
+  "fixed": {
+    "A": [
+      0,
+      0
+    ],
+    "D": [
+      100,
+      -72
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        40.0,
+        0
+      ],
+      "phase_deg": -22
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "D",
+      "r": 100.0,
+      "s": 84.0,
+      "branch": 1
+    },
+    {
+      "op": "rigid",
+      "out": "K",
+      "origin": "B",
+      "known": "C",
+      "known_local": [
+        100.0,
+        0
+      ],
+      "target_local": [
+        200,
+        0
+      ]
+    },
+    {
+      "op": "rigid",
+      "out": "E",
+      "origin": "B",
+      "known": "C",
+      "known_local": [
+        100.0,
+        0
+      ],
+      "target_local": [
+        200,
+        -64
+      ]
+    }
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      40.0
+    ],
+    [
+      "B",
+      "C",
+      100.0
+    ],
+    [
+      "C",
+      "D",
+      84.0
+    ],
+    [
+      "B",
+      "K",
+      200
+    ],
+    [
+      "K",
+      "E",
+      64
+    ],
+    [
+      "B",
+      "E",
+      209.990475974507
+    ],
+    [
+      "C",
+      "E",
+      118.72657663724664
+    ]
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "K"
+    ],
+    [
+      "K",
+      "E"
+    ],
+    [
+      "D",
+      "C"
+    ]
+  ],
+  "rigid_points": [
+    "B",
+    "C",
+    "K",
+    "E"
+  ],
+  "rod_width": 8,
+  "reference_case_only": "Topology in this documented reference case; new images require fresh rigid-body confirmation."
+}

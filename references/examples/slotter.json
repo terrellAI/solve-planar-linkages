@@ -1,0 +1,134 @@
+{
+  "name": "slotter",
+  "fixed": {
+    "A": [
+      0,
+      100
+    ],
+    "C": [
+      0,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        40,
+        0
+      ]
+    },
+    {
+      "op": "rigid",
+      "out": "D",
+      "origin": "C",
+      "known": "B",
+      "known_local": [
+        1,
+        0
+      ],
+      "target_local": [
+        -80,
+        0
+      ]
+    },
+    {
+      "op": "rigid",
+      "out": "T",
+      "origin": "C",
+      "known": "B",
+      "known_local": [
+        1,
+        0
+      ],
+      "target_local": [
+        160,
+        0
+      ]
+    },
+    {
+      "op": "circle_line",
+      "out": "E",
+      "p": "D",
+      "r": 120,
+      "q": [
+        0,
+        -100
+      ],
+      "v": [
+        1,
+        0
+      ],
+      "branch": 1
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "D",
+      "T"
+    ],
+    [
+      "D",
+      "E"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      40
+    ],
+    [
+      "C",
+      "D",
+      80
+    ],
+    [
+      "C",
+      "T",
+      160
+    ],
+    [
+      "D",
+      "E",
+      120
+    ]
+  ],
+  "guides": [
+    {
+      "point": "B",
+      "origin_point": "C",
+      "through_point": "T",
+      "lo": 50,
+      "hi": 150,
+      "sleeve_length": 16,
+      "rod_width": 8,
+      "hole_width": 10
+    },
+    {
+      "point": "E",
+      "origin": [
+        0,
+        -100
+      ],
+      "axis": [
+        1,
+        0
+      ],
+      "lo": 60,
+      "hi": 175,
+      "sleeve_length": 22,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram"
+}

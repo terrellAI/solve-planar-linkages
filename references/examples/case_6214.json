@@ -1,0 +1,134 @@
+{
+  "name": "case_6214",
+  "title": "6214 | opposite rigid arm + slider",
+  "fixed": {
+    "A": [
+      200,
+      160
+    ],
+    "D": [
+      0,
+      0
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "B",
+      "origin": "A",
+      "local": [
+        20,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "C",
+      "p": "B",
+      "q": "D",
+      "r": 200,
+      "s": 160,
+      "branch": 1
+    },
+    {
+      "op": "rigid",
+      "out": "E",
+      "origin": "D",
+      "known": "C",
+      "known_local": [
+        160,
+        0
+      ],
+      "target_local": [
+        -80,
+        0
+      ]
+    },
+    {
+      "op": "circle_line",
+      "out": "F",
+      "p": "E",
+      "r": 150,
+      "q": [
+        -60,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "branch": -1
+    }
+  ],
+  "rods": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "E"
+    ],
+    [
+      "E",
+      "F"
+    ]
+  ],
+  "lengths": [
+    [
+      "A",
+      "B",
+      20
+    ],
+    [
+      "B",
+      "C",
+      200
+    ],
+    [
+      "D",
+      "C",
+      160
+    ],
+    [
+      "D",
+      "E",
+      80
+    ],
+    [
+      "E",
+      "F",
+      150
+    ]
+  ],
+  "rigid_points": [
+    "C",
+    "D",
+    "E"
+  ],
+  "guides": [
+    {
+      "point": "F",
+      "origin": [
+        -60,
+        0
+      ],
+      "axis": [
+        0,
+        1
+      ],
+      "lo": -190,
+      "hi": -70,
+      "sleeve_length": 24,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ],
+  "units": "mm",
+  "rod_width": 8,
+  "dimension_source": "declared example parameters; not measured from diagram"
+}
