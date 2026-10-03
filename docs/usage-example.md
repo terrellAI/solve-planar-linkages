@@ -64,24 +64,24 @@
 
 ### 第一步：旋转矩阵生成 A
 
-$$
+```math
 R(\theta)=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix},\qquad
 A=O+R(\theta)\begin{bmatrix}40\\0\end{bmatrix}.
-$$
+```
 
 ### 第二步：由两圆交点得到 B
 
 圆心分别为 A、C，半径分别为 AB＝110、CB＝95。
 
-$$
+```math
 d=\|C-A\|,\quad u=\frac{C-A}{d},\quad
 J=\begin{bmatrix}0&-1\\1&0\end{bmatrix},
-$$
+```
 
-$$
+```math
 a=\frac{110^2-95^2+d^2}{2d},\quad h=\sqrt{110^2-a^2},\quad
 B=A+a u-hJu.
-$$
+```
 
 本次初始装配选分支 −1，保持 B 在从 A 指向 C 的右侧，不逐帧换根。
 
@@ -89,11 +89,11 @@ $$
 
 以 A 为局部原点，B 的局部坐标为 (110,0)，D 为 (210,0)。
 
-$$
+```math
 Q=[v,Jv],\quad v=\frac{B-A}{110},\qquad
 D=A+Q\begin{bmatrix}210\\0\end{bmatrix}
  =A+\frac{210}{110}(B-A).
-$$
+```
 
 该表达保持 AB、BD、AD 不变及 ABD 共线；不是另设一根自由转动的 BD 杆。
 
@@ -101,9 +101,9 @@ $$
 
 令辅助垂足 H＝(210,D_y)，H 不是实体铰点，不计入构件和运动副。
 
-$$
+```math
 E_x=210,\qquad E_y=D_y+\sqrt{90^2-(210-D_x)^2}.
-$$
+```
 
 本次保留 E 位于 D 上方的装配分支 +1。
 以上均为顺序几何构造，未使用数值方程求解器。
