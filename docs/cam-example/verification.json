@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "samples": 3601,
+  "step_deg": 0.1,
+  "maximum_constraint_error": 1.4263027348861282e-14,
+  "closure_error": 9.797174393178826e-15,
+  "continuous_proven": false,
+  "scope": "sampled ideal prescribed knife-edge contact; no force closure, interference or manufacturability proof",
+  "base_radius": 40.0,
+  "offset": 0.0,
+  "direction": "counterclockwise",
+  "animation": {
+    "frames": 300,
+    "fps": 50,
+    "frame_duration_ms": 20,
+    "file_size_bytes": 807015,
+    "file_size_limit_bytes": 5000000,
+    "under_size_limit": true,
+    "loop": 0,
+    "export_size_px": [
+      960,
+      720
+    ],
+    "palette_colors": 128,
+    "frame_dropping": false,
+    "compression_attempts": [
+      {
+        "size": [
+          960,
+          720
+        ],
+        "colors": 128,
+        "bytes": 807015
+      }
+    ],
+    "expected_step_deg": 1.2,
+    "maximum_step_error_deg": 8.126832540256146e-14,
+    "loop_seam_step_deg": 1.1999999999999904,
+    "closure_error": 9.797174393178826e-15,
+    "period_seconds": 6.0
+  },
+  "dimension_source": "confirmed teaching example; not measured from textbook image",
+  "lift": 20,
+  "phase_angles_deg": [
+    60,
+    20,
+    40,
+    240
+  ],
+  "independent_hand_positions_passed": true,
+  "boundary_position_velocity_continuous": true,
+  "boundary_acceleration_continuous": false
+}
