@@ -75,7 +75,7 @@ python scripts/test_animation.py
 python scripts/test_expanded_examples.py
 ```
 
-本仓库发布时已运行以上回归检查。检查通过只覆盖现有实现和案例，不意味着本次未确认机构已求解。
+本仓库发布时已运行以上回归检查。回归检查覆盖现有实现和案例；本次机构的具体结论见独立验证记录。
 
 ## 文件索引
 
