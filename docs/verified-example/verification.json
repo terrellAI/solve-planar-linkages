@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "code": "ok",
+  "sample_count": 3601,
+  "maximum_residual": 5.684341886080802e-14,
+  "closure_error": 9.797174393178826e-15,
+  "minimum_sampled_axial_margin": 37.57578097047946,
+  "minimum_side_clearance": 1.0,
+  "continuous_reachability_proven": false,
+  "scope": "sampled kinematics and declared guide engagement; derive continuous bounds separately",
+  "animation": {
+    "passed": true,
+    "frames": 300,
+    "closure_error": 9.797174393178826e-15,
+    "drives": [
+      {
+        "point": "A",
+        "expected_step_deg": 1.2,
+        "maximum_step_error_deg": 8.126832540256146e-14,
+        "loop_seam_step_deg": 1.1999999999999902
+      }
+    ],
+    "fps": 50,
+    "frame_duration_ms": 20,
+    "file_size_bytes": 1182373,
+    "file_size_limit_bytes": 5000000,
+    "under_size_limit": true,
+    "loop": 0,
+    "export_size_px": [
+      720,
+      480
+    ],
+    "palette_colors": 128,
+    "frame_dropping": false,
+    "compression_attempts": [
+      {
+        "size": [
+          720,
+          480
+        ],
+        "colors": 128,
+        "bytes": 1182373
+      }
+    ],
+    "period_seconds": 6.0
+  }
+}

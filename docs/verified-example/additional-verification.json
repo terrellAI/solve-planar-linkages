@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "sample_count": 3601,
+  "maximum_independent_length_error_mm": 5.684341886080802e-14,
+  "maximum_AB_AD_cross_product_mm2": 5.4569682106375694e-12,
+  "minimum_signed_branch_area_mm2": 5693.952383889419,
+  "maximum_rigid_frame_transform_error_mm": 1.5106345774618504e-13,
+  "sampled_output_range_mm": [
+    134.57578097047946,
+    267.3763916671976
+  ],
+  "sampled_stroke_mm": 132.80061069671814,
+  "sampled_extremum_angles_deg": [
+    170.9,
+    50.9
+  ],
+  "input_direction": "counterclockwise, explicitly selected example convention; user did not separately specify clockwise/counterclockwise",
+  "branches": {
+    "B": -1,
+    "E": 1
+  }
+}

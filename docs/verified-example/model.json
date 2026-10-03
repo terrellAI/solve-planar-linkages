@@ -1,0 +1,144 @@
+{
+  "name": "Confirmed ABD coupler and vertical slider",
+  "units": "mm",
+  "dimension_source": "Declared example dimensions, not measured from the user image",
+  "topology_source": "User confirmed 2026-10-03: O,C fixed; OA crank; ABD rigid; CB independent rocker; DE link; E vertical slider; indexed points are other poses",
+  "input_assumption": "counterclockwise theta from +x; example initial theta=-20 deg shown in static diagram",
+  "fixed": {
+    "O": [
+      0,
+      0
+    ],
+    "C": [
+      0,
+      100
+    ]
+  },
+  "plan": [
+    {
+      "op": "rotate",
+      "out": "A",
+      "origin": "O",
+      "local": [
+        40,
+        0
+      ]
+    },
+    {
+      "op": "circles",
+      "out": "B",
+      "p": "A",
+      "q": "C",
+      "r": 110,
+      "s": 95,
+      "branch": -1
+    },
+    {
+      "op": "rigid",
+      "out": "D",
+      "origin": "A",
+      "known": "B",
+      "known_local": [
+        110,
+        0
+      ],
+      "target_local": [
+        210,
+        0
+      ]
+    },
+    {
+      "op": "circle_line",
+      "out": "E",
+      "p": "D",
+      "r": 90,
+      "q": [
+        210,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "branch": 1
+    }
+  ],
+  "rods": [
+    [
+      "O",
+      "A"
+    ],
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "D"
+    ],
+    [
+      "C",
+      "B"
+    ],
+    [
+      "D",
+      "E"
+    ]
+  ],
+  "lengths": [
+    [
+      "O",
+      "A",
+      40
+    ],
+    [
+      "A",
+      "B",
+      110
+    ],
+    [
+      "B",
+      "D",
+      100
+    ],
+    [
+      "A",
+      "D",
+      210
+    ],
+    [
+      "C",
+      "B",
+      95
+    ],
+    [
+      "D",
+      "E",
+      90
+    ]
+  ],
+  "rigid_points": [
+    "A",
+    "B",
+    "D"
+  ],
+  "rod_width": 8,
+  "guides": [
+    {
+      "point": "E",
+      "origin": [
+        210,
+        0
+      ],
+      "axis": [
+        0,
+        1
+      ],
+      "lo": 85,
+      "hi": 320,
+      "sleeve_length": 24,
+      "rod_width": 8,
+      "hole_width": 10
+    }
+  ]
+}

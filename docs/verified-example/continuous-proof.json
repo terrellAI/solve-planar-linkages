@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "method": "mpmath interval arithmetic, 30 decimal digits; 3600 closed intervals covering [0,2*pi]; exported float bounds widened by 1e-9",
+  "interval_count": 3600,
+  "fourbar_center_distance_range_mm": [
+    60,
+    140
+  ],
+  "fourbar_strict_conditions": [
+    "abs(110-95)=15 < 60",
+    "140 < 110+95=205"
+  ],
+  "bounds_mm": {
+    "D_x": [
+      141.15884475077655,
+      186.22160437220566
+    ],
+    "D_y": [
+      55.69424547163566,
+      198.2441172002905
+    ],
+    "E_y": [
+      134.00602837622472,
+      268.0733369656209
+    ]
+  },
+  "minimum_two_circle_h_squared_mm2": 5541.859590351963,
+  "minimum_circle_line_radicand_mm2": 3360.8953440889986,
+  "minimum_proven_guide_axial_margin_mm": 37.00602837622472,
+  "side_clearance_mm": 1,
+  "scope": "Continuous geometric reachability on the fixed branches and finite slider engagement for this exact example model. Not a collision, strength or manufacturing proof."
+}
