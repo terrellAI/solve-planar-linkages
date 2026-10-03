@@ -34,7 +34,15 @@ python -m pip install -r .agents/skills/solve-planar-linkages/requirements.txt
 
 ![用户提供的机构图](docs/mechanism-input.png)
 
-完整说明见 [机构图使用指南](docs/usage-example.md)。
+### 本次实际调用输出：拓扑确认图
+
+![本图的带引线拓扑确认图](docs/topology-confirmation.png)
+
+上图为确认前的真实首轮输出。用户随后回复“正确”，确认 ABD 刚体等关系，再继续完成验证；新图仍需独立确认。
+
+本次实际执行记录见 [机构图使用指南](docs/usage-example.md)：拓扑已确认，示例模型已完成连续可达性、导轨接合、0.1°采样和300帧动画验证。
+
+![已验证的真实机构动画](docs/verified-example/animation.gif)
 第一条消息可直接复制：
 
 ```text
